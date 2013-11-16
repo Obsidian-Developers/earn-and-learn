@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Earn and learn</title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class = "navbar navbar-inverse navbar-static-top">
+            <div class = "container">
+            	<a href = "/" class = "navbar-brand" style="color: white;">Earn And Learn</a>
+                    <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                    </button>
+	            <div class = "collapse navbar-collapse navHeaderCollapse">
+	                <ul class = "nav navbar-nav navbar-right">
+	                   
+	                    <li id="nav_ach"><a href = "/about/achievements" style="color: white;">Achievements</a></li>
+	                    <li id="nav_faq"><a href = "/about/faq" style="color: white;">FAQ</a></li>
+	                    <li id="nav_test"><a href = "/about/testimonials" style="color: white;">Testimonials</a></li>
+	                    <li id="nav_news"><a href = "/about/news" style="color: white;">In the News</a></li>
+	                    <li id="nav_steal"><a href = "/steal/index" style=" color: white;">Steal This Idea!</a></li>
+	                    <li><a href = "#" data-toggle="modal" data-target="#myModal" style="color: white;">Contact Us</a></li>
+	                </ul>
+	            </div>
+	        </div>
+        </div>
+        <div class="col-md-2">
+        	<div class="nav nav-pills nav-stacked" style="padding-top: 25px;">
+		        <div class="accordion" id="accordion2">
+				  <div class="accordion-group">
+				    <div class="accordion-heading">
+				      <a class="accordion-toggle btn btn-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" style="width: 100%; text-align: left;">
+				        <span style="font-size: 17px;">For Students</span> <span class="glyphicon glyphicon-chevron-down" style="float: right;"></span>
+				      </a>
+				    </div>
+				    <div id="collapseOne" class="accordion-body collapse ">
+				      <div class="accordion-inner">
+				        Anim pariatur cliche...
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-group">
+				    <div class="accordion-heading">
+				      <a class="accordion-toggle btn btn-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" style="width: 100%; text-align: left; margin-top: 5px;">
+				        <span style="font-size: 17px;">For Parents</span> <span class="glyphicon glyphicon-chevron-down" style="float: right;"></span>
+				      </a>
+				    </div>
+				    <div id="collapseTwo" class="accordion-body collapse">
+				      <div class="accordion-inner">
+				        Anim pariatur cliche...
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-group">
+				    <div class="accordion-heading">
+				      <a class="accordion-toggle btn btn-primary" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree" style="width: 100%; text-align: left; margin-top: 5px;">
+				        <span style="font-size: 17px;">For Administrators</span> <span class="glyphicon glyphicon-chevron-down" style="float: right;"></span>
+				      </a>
+				    </div>
+				    <div id="collapseThree" class="accordion-body collapse">
+				      <div class="accordion-inner">
+				        Anim pariatur cliche...
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			
+			<%= yield %>
+		
+		</div>
+		
+
+		<!-- Modal for Contact Us-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+		      </div>
+		      <div class="modal-body">
+		        <h3>Jefry Rosmarin, Director Geri Fuller</h3>
+		        		<p>Earn and Learn Program</br>
+		        		10 Mount Misery Road</br>
+		        		Huntington, NY 11743</p>
+		        		<p>Ph: 631-629-4375</br>
+		        		Fx: 631-629-4376</p>
+		        		<p>Email: jefryr@aol.com</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-blue" onclick="window.location.href='mailto:jefry@aol.com?Subject=Earn%20and%20Learn'"> Send Email</button>
+		        <button type="button" class="btn btn-default btn-green" onclick="window.location.href='https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=10+Mount+Misery+Road+Huntington,+NY+11743&aq=&sll=40.84773,-73.816663&sspn=0.625369,1.352692&vpsrc=0&t=h&ie=UTF8&hq=&hnear=10+Mt+Misery+Rd,+Huntington,+New+York+11743&z=16&iwloc=A'">Google Maps</button>
+
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	</body>
+</html>
+
